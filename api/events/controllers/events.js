@@ -1,5 +1,5 @@
 "use strict";
-const { sanatizeEntity } = require("strapi-utils");
+const { sanitizeEntity } = require("strapi-utils");
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
@@ -23,6 +23,6 @@ module.exports = {
       return ctx.notFound();
     }
 
-    return sanatizeEntity(data, { model: strapi - models.events });
+    return sanitizeEntity(data, { model: strapi.models.events });
   },
 };
